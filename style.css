@@ -1,0 +1,307 @@
+/* ==========================================================================
+   🧁 Yonggang Middle School - Antigravity Vibe Coding Dessert Theme
+   ========================================================================== */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Gaegu:wght@400;700&family=Nunito:wght@600;800;900&display=swap');
+
+:root {
+  --bg-cream: #FDFBF7;
+  --bg-warm: #FFF9EE;
+  --bg-card: #FFFFFF;
+  --border-soft: #F1E5D1;
+  --border-matcha: #C8E6C9;
+  --matcha-dark: #205C40;
+  --matcha-main: #2E7D32;
+  --matcha-light: #E8F5E9;
+  --matcha-accent: #81C784;
+  --berry-pink: #E84A5F;
+  --berry-soft: #FFF0F2;
+  --berry-border: #FFCDD2;
+  --custard-yellow: #FFB300;
+  --custard-light: #FFF8E1;
+  --macaron-blue: #3A86FF;
+  --macaron-light: #EBF4FF;
+  --cookie-brown: #6D4C41;
+  --cookie-dark: #3E2723;
+  --text-main: #332B25;
+  --text-muted: #796E65;
+  --shadow-warm: 0 10px 25px -4px rgba(109, 76, 65, 0.08), 0 4px 10px -2px rgba(109, 76, 65, 0.04);
+  --shadow-floating: 0 18px 35px -8px rgba(109, 76, 65, 0.12), 0 6px 15px -3px rgba(109, 76, 65, 0.06);
+  --radius-card: 24px;
+  --radius-pill: 9999px;
+  --radius-badge: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: var(--bg-cream);
+  color: var(--text-main);
+  line-height: 1.65;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(#F0E5D3 1px, transparent 1px),
+    radial-gradient(#F0E5D3 1px, #FDFBF7 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+.font-jua {
+  font-family: 'Jua', 'Pretendard', sans-serif;
+}
+
+.font-gaegu {
+  font-family: 'Gaegu', cursive, sans-serif;
+}
+
+.font-display {
+  font-family: 'Jua', 'Pretendard', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F3EA;
+}
+::-webkit-scrollbar-thumb {
+  background: #D7C4B7;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #BAA091;
+}
+
+/* Card & Surface styles */
+.dessert-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border-soft);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-warm);
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease;
+}
+
+.dessert-card:hover {
+  box-shadow: var(--shadow-floating);
+}
+
+.dessert-card-interactive:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-floating);
+  border-color: #E6D2BF;
+}
+
+/* Bakery Tag Badges */
+.badge-matcha {
+  background: var(--matcha-light);
+  color: var(--matcha-dark);
+  border: 1px solid var(--border-matcha);
+}
+
+.badge-berry {
+  background: var(--berry-soft);
+  color: var(--berry-pink);
+  border: 1px solid var(--berry-border);
+}
+
+.badge-custard {
+  background: var(--custard-light);
+  color: #B26A00;
+  border: 1px solid #FFE082;
+}
+
+.badge-macaron {
+  background: var(--macaron-light);
+  color: #1D4ED8;
+  border: 1px solid #BFDBFE;
+}
+
+.badge-cookie {
+  background: #EFEBE9;
+  color: var(--cookie-brown);
+  border: 1px solid #D7CCC8;
+}
+
+/* Prompt Box */
+.prompt-box {
+  background: #2D2522;
+  color: #F8F4EE;
+  border-radius: 18px;
+  position: relative;
+  border: 2px solid #4E3C36;
+}
+
+.prompt-box code, .prompt-box pre {
+  font-family: 'Pretendard', Consolas, Monaco, monospace;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Floating copy button */
+.copy-btn-primary {
+  background: linear-gradient(135deg, #FF758C 0%, #FF6B8B 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 107, 139, 0.35);
+  transition: all 0.2s ease;
+}
+.copy-btn-primary:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 18px rgba(255, 107, 139, 0.45);
+}
+.copy-btn-primary:active {
+  transform: scale(0.98);
+}
+
+.copy-btn-matcha {
+  background: linear-gradient(135deg, #40916C 0%, #2D6A4F 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(45, 106, 79, 0.3);
+  transition: all 0.2s ease;
+}
+.copy-btn-matcha:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 18px rgba(45, 106, 79, 0.4);
+}
+.copy-btn-matcha:active {
+  transform: scale(0.98);
+}
+
+/* Toast notification */
+#copy-toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(120px);
+  background: rgba(45, 37, 34, 0.95);
+  color: #FFF9EE;
+  padding: 14px 28px;
+  border-radius: 9999px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  z-index: 9999;
+  transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.35s ease;
+  opacity: 0;
+  pointer-events: none;
+  border: 2px solid #FFB300;
+}
+
+#copy-toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* Step Tab Active States */
+.step-nav-btn {
+  transition: all 0.2s ease;
+  position: relative;
+  white-space: nowrap;
+}
+
+.step-nav-btn.active {
+  background: #2D6A4F;
+  color: white !important;
+  box-shadow: 0 6px 16px rgba(45, 106, 79, 0.25);
+  border-color: #2D6A4F;
+  transform: translateY(-2px);
+}
+
+.step-nav-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0; 
+  height: 0; 
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #2D6A4F;
+}
+
+/* Custom Checkbox */
+.dessert-checkbox {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #D7C4B7;
+  border-radius: 7px;
+  outline: none;
+  cursor: pointer;
+  display: inline-grid;
+  place-content: center;
+  transition: all 0.2s ease;
+  background: white;
+}
+.dessert-checkbox:checked {
+  background: #2D6A4F;
+  border-color: #2D6A4F;
+}
+.dessert-checkbox:checked::before {
+  content: "✓";
+  color: white;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+/* Floating mascot animation */
+@keyframes softBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.floating-cake {
+  animation: softBounce 3.5s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 179, 0, 0.4); }
+  50% { box-shadow: 0 0 0 10px rgba(255, 179, 0, 0); }
+}
+
+.pulse-yellow {
+  animation: pulseGlow 2.5s infinite;
+}
+
+/* Progress Bar */
+.progress-container {
+  background: #EFE8DA;
+  border-radius: 9999px;
+  overflow: hidden;
+  height: 14px;
+  border: 2px solid #E2D6C3;
+}
+
+.progress-bar-fill {
+  background: linear-gradient(90deg, #74C69D 0%, #40916C 50%, #FFB300 100%);
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.4s ease;
+}
+
+/* Print styling for QR and checklist */
+@media print {
+  body {
+    background: white !important;
+    background-image: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .dessert-card {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+}

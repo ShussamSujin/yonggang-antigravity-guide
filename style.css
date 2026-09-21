@@ -1,12 +1,11 @@
 /* ==========================================================================
-   ☕ Yonggang Middle School - Antigravity Guide Refined Korean Typography
+   ☕ Yonggang Middle School - Antigravity Guide : '고운 바탕체 (Gowun Batang)'
    ========================================================================== */
 
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-@import url('https://cdn.jsdelivr.net/gh/sun-typeface/maru-buri@v1.0.0/dist/web/static/maru-buri.css');
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Serif+KR:wght@500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
 
 :root {
+  --font-family-base: 'Gowun Batang', 'Noto Serif KR', Batang, serif;
   --bg-cream: #FDFBF7;
   --bg-warm: #FFF9EE;
   --bg-card: #FFFFFF;
@@ -35,15 +34,16 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  letter-spacing: -0.02em;
+  font-family: var(--font-family-base) !important;
+  letter-spacing: -0.015em;
   -webkit-tap-highlight-color: transparent;
 }
 
 body {
+  font-family: var(--font-family-base) !important;
   background-color: var(--bg-cream);
   color: var(--text-main);
-  line-height: 1.7;
+  line-height: 1.75;
   overflow-x: hidden;
   background-image: 
     radial-gradient(#E8DBC8 0.8px, transparent 0.8px),
@@ -52,13 +52,15 @@ body {
   background-position: 0 0, 16px 16px;
 }
 
-/* Crisp, structured, angled Korean serif heading */
-.font-jua,
-.font-display,
-h1, h2, h3, .font-heading {
-  font-family: 'MaruBuri', 'Gowun Batang', 'Noto Serif KR', serif !important;
-  letter-spacing: -0.03em;
+/* Headings with Gowun Batang Bold */
+h1, h2, h3, h4, .font-jua, .font-display, .font-heading {
+  font-family: var(--font-family-base) !important;
+  letter-spacing: -0.025em;
   font-weight: 700;
+}
+
+button, input, textarea, select {
+  font-family: var(--font-family-base) !important;
 }
 
 /* Custom scrollbar */
@@ -101,11 +103,10 @@ h1, h2, h3, .font-heading {
 }
 
 .prompt-box code, .prompt-box pre {
-  font-family: 'Pretendard', Consolas, Monaco, monospace;
+  font-family: 'Consolas', 'D2Coding', 'Gowun Batang', monospace !important;
   white-space: pre-wrap;
   word-break: break-word;
-  line-height: 1.65;
-  letter-spacing: -0.01em;
+  line-height: 1.7;
 }
 
 /* Crisp button styles */
@@ -151,7 +152,7 @@ h1, h2, h3, .font-heading {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-weight: 600;
+  font-weight: 700;
   z-index: 9999;
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
   opacity: 0;
@@ -178,6 +179,7 @@ h1, h2, h3, .font-heading {
   box-shadow: 0 4px 12px rgba(30, 81, 54, 0.2);
   border-color: #1E5136;
   transform: translateY(-1px);
+  font-weight: 700;
 }
 
 .step-nav-btn.active::after {
